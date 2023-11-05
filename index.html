@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body id="body">
+    <header id="header">
+        <div class="turn-container">
+            <h2 id="turn-text">X</h2>
+            <h3 class="text-header">TURN</h3>
+        </div>
+        <button id="theme-button">
+            <i class="material-icons text-header">brightness_medium</i>
+            <h4 class="text-header">CHANGE THEME</h4>
+        </button>
+    </header>
+    <main id="main-grid-container">
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+        <div class="grid-item "></div>
+    </main>
+
+    <div id="win-alert-container">
+        <div id="win-alert-box">
+            <h2 id="winner-alert"><span id="winner-span"></span></h2>
+            <button id="play-again-button">PLAY AGAIN</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
