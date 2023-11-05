@@ -9,6 +9,7 @@ const winnerSpan = document.getElementById("winner-span");
 const playAgainButton = document.getElementById("play-again-button");
 
 const themeButton = document.getElementById("theme-button");
+const themeIcon = document.getElementById("theme-icon");
 const textHeader = document.querySelectorAll(".text-header");
 const winAlertBox = document.getElementById("win-alert-box");
 
@@ -48,7 +49,7 @@ mainGridContainer.addEventListener("click", function mark(event){
 
 });
 
-themeButton.addEventListener("click", function changeTheme(event){
+themeButton.addEventListener("click", function changeTheme(){
     if(stateTheme == "LIGHT"){
         stateTheme = "DARK";
 
@@ -56,18 +57,20 @@ themeButton.addEventListener("click", function changeTheme(event){
 
         mainGridContainer.style.backgroundColor = light0;
         mainGridContainer.style.border = `5px solid ${light0}`;
-        gridItems.forEach(element => element.style.backgroundColor = dark2)
+        gridItems.forEach(element => element.style.backgroundColor = dark2);
 
-        textHeader.forEach(element=> element.style.color = light0)
+        textHeader.forEach(element=> element.style.color = light0);
+        themeIcon.style.color = light0;
+        themeIcon.textContent = "light_mode";
         themeButton.style.backgroundColor = dark2;
-        themeButton.style.border = `1px solid ${light0}`;
+        themeButton.style.border = `3px solid ${light0}`;
 
         winAlertBox.style.backgroundColor = dark1;
-        winAlertBox.style.border = `5px solid ${light0}`
+        winAlertBox.style.border = `5px solid ${light0}`;
         winnerSpan.style.color = light0;
         playAgainButton.style.backgroundColor = dark2;
         playAgainButton.style.color = light0;
-        playAgainButton.style.border = `1px solid ${light0}`;
+        playAgainButton.style.border = `3px solid ${light0}`;
     }
     else{
         stateTheme = "LIGHT";
@@ -76,24 +79,24 @@ themeButton.addEventListener("click", function changeTheme(event){
 
         mainGridContainer.style.backgroundColor = dark0;
         mainGridContainer.style.border = `5px solid ${dark0}`;
-        gridItems.forEach(element => element.style.backgroundColor = light0)
+        gridItems.forEach(element => element.style.backgroundColor = light0);
 
-        textHeader.forEach(element=> element.style.color = dark0)
+        textHeader.forEach(element=> element.style.color = dark0);
+        themeIcon.style.color = dark0;
+        themeIcon.textContent = "dark_mode";
         themeButton.style.backgroundColor = light0;
-        themeButton.style.border = `1px solid ${dark0}`;
+        themeButton.style.border = `3px solid ${dark0}`;
 
         winAlertBox.style.backgroundColor = light0;
-        winAlertBox.style.border = `5px solid ${dark0}`
+        winAlertBox.style.border = `5px solid ${dark0}`;
         winnerSpan.style.color = dark0;
         playAgainButton.style.backgroundColor = light1;
         playAgainButton.style.color = dark0;
-        playAgainButton.style.border = `1px solid ${dark0}`;
+        playAgainButton.style.border = `3px solid ${dark0}`;
     }
 })
 
-playAgainButton.addEventListener("click", function a(){
-    reset();
-});
+playAgainButton.addEventListener("click", ()=>reset());
 
 themeButton.addEventListener(("mouseover"),()=> mouseOver(themeButton));
 themeButton.addEventListener(("mouseout"),()=> mouseOut(themeButton));
