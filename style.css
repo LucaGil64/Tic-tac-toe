@@ -81,7 +81,7 @@ body{
     background-color: rgba(51, 51, 255, .75);
 
 
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-delay: .2s;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
